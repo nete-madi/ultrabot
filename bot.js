@@ -83,4 +83,4 @@ msg.channel.send({ embed });
 
 	});
 
-bot.login(process.env.token);//utilizes login token, config.token is used instead of the actual token
+bot.login(process.env.config.token);//utilizes login token, config.token is used instead of the actual token
