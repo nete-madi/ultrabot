@@ -1,6 +1,5 @@
 const Discord = require('discord.js'); //implements discord.js library
 const bot = new Discord.Client();
-const ball = require('ball.txt');
 
 bot.on('ready',()=>{
 		bot.user.setPresence({ status: 'online', game: { name: 'with some code!' } });
@@ -14,9 +13,28 @@ bot.on('message', msg =>{//object of type message, named "messsage"
 	if(msg.content.startsWith(prefix)) return;
 	if(msg.author === bot.user) return;//This is a check to make sure that the message is coming from a user so the bot does not respond to itself.
 
-		var answers = [ball];//array size 20, index begins at 0
+		var answers = ['It is certain',
+    'It is decidedly so',
+    'Without a doubt',
+    'Yes, definitely',
+    'You may rely on it',
+    'As I see it, yes',
+    'Most likely',
+    'Outlook good',
+    'Yes',
+    'Signs point to yes',
+    'Reply hazy, try again',
+    'Ask again later',
+    'Better not tell you now',
+    'Cannot predict now',
+    'Concentrate and ask again',
+    'Don\'t count on it',
+    'My reply is no',
+    'My sources say no',
+    'Outlook not so good',
+    'Very doubtful'
+];//array size 20, index begins at 0
 
-    //var jokes
 
 	const args = msg.content.slice(prefix.length).trim().split(/ +/g);
  	const cmd = args.shift().toLowerCase();
