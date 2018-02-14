@@ -9,7 +9,7 @@ bot.on('ready',()=>{
 
 bot.on('message', msg =>{//object of type message, named "messsage"
 	
-	var prefix = "!";
+	var prefix = ".";
 
 	if(msg.content.startsWith(prefix)) return;
 	if(msg.author === bot.user) return;//This is a check to make sure that the message is coming from a user so the bot does not respond to itself.
