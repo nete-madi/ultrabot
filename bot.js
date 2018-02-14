@@ -37,7 +37,7 @@ bot.on('message', msg =>{//object of type message, named "messsage"
 	
 	  var jokes = [
       'Two neutrons walk into a bar, and the bartender says, \"No charge for you.\"',
-      'What happens when a frog's car breaks down? It gets toad away!',
+      'What happens when a frog\'s car breaks down? It gets toad away!',
       'Why did the hipster burn his tongue? He drank his coffee before it was cool.',
       'Two bots walk into a Discord server...I forget the rest.'
     ];
