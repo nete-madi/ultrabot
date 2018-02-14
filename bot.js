@@ -15,7 +15,7 @@ bot.on('disconnected', function () {
 
 bot.on('message', msg =>{//object of type message, named "messsage"
 
-	if(msg.content.startsWith(config.prefix)) return;
+	if(msg.content.startsWith("!")) return;
 	if(msg.author === bot.user) return;//This is a check to make sure that the message is coming from a user so the bot does not respond to itself.
 
 		var answers = [ 'It is certain','It is decidedly so',
