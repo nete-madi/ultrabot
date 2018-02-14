@@ -2,14 +2,9 @@ const Discord = require('discord.js'); //implements discord.js library
 const bot = new Discord.Client();
 
 bot.on('ready',()=>{
-		console.log(`***${bot.user.username} v. ${config.version}: ONLINE***`);//displays when bot goes online
+		//console.log(`***${bot.user.username} v. ${config.version}: ONLINE***`);//displays when bot goes online
 		bot.user.setPresence({ status: 'online', game: { name: 'with some code!' } });
 })
-
-bot.on('disconnected', function () {
-    console.log('Disconnected.');
-    process.exit(1);
-	});
 
 
 bot.on('message', msg =>{//object of type message, named "messsage"
