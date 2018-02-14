@@ -10,6 +10,6 @@
   "author": "whatsupdawg",
   "license": "MIT",
   "dependencies": {
-    "discord.js": "^11.3.0",
+    "discord.js": "^11.3.0"
   }
 }
