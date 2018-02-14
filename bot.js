@@ -1,6 +1,5 @@
 const Discord = require('discord.js'); //implements discord.js library
 const bot = new Discord.Client();
-const config = require('./config.json'); //current directory, refers to config.json file
 
 bot.on('ready',()=>{
 		console.log(`***${bot.user.username} v. ${config.version}: ONLINE***`);//displays when bot goes online
@@ -14,8 +13,10 @@ bot.on('disconnected', function () {
 
 
 bot.on('message', msg =>{//object of type message, named "messsage"
+	
+	var prefix = "!";
 
-	if(msg.content.startsWith(config.prefix)) return;
+	if(msg.content.startsWith(prefix)) return;
 	if(msg.author === bot.user) return;//This is a check to make sure that the message is coming from a user so the bot does not respond to itself.
 
 		var answers = [ 'It is certain','It is decidedly so',
@@ -38,7 +39,7 @@ bot.on('message', msg =>{//object of type message, named "messsage"
 		'Outlook not so good',
 		'Very doubtful'];//array size 20, index begins at 0
 
-	const args = msg.content.slice(config.prefix.length).trim().split(/ +/g);
+	const args = msg.content.slice(prefix.length).trim().split(/ +/g);
  	const cmd = args.shift().toLowerCase();
 
 	if(cmd === 'joke'){
@@ -70,7 +71,7 @@ msg.channel.send({ embed });
 
 	else if(cmd === 'pick'){
 		//Implement a pick command.Takes a list of items after !pick and randomly picks one.
-		const choices = msg.content.slice(config.prefix.length).trim().split(",");//requires that the choices be comma separated
+		const choices = msg.content.slice(prefix.length).trim().split(",");//requires that the choices be comma separated
 	 	const picker = choices.shift().toLowerCase();
 
 		let rand = Math.floor(Math.random()*choices.length);
