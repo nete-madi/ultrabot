@@ -2,7 +2,7 @@ const Discord = require('discord.js'); //implements discord.js library
 const bot = new Discord.Client();
 
 bot.on('ready',()=>{
-		bot.user.setPresence({ status: 'online', game: { name: 'with some code!' } });
+		bot.user.setPresence({ status: 'online', game: { name: 'Github: whatsupdawg' } });
 })
 
 
@@ -35,48 +35,67 @@ bot.on('message', msg =>{//object of type message, named "messsage"
     'Very doubtful'
 ];//array size 20, index begins at 0
 
+var jokes = [
+	'Two Discord bots walk into a server... I forget the rest.',
+	'What happened when the frog\'s car broke down? It got toad!',
+	'Why did the hipster burn his tongue? He drank his coffee before it was cool.',
+	'Two neutrons walk into a bar, and the bartender says, \"No charge for you.\"',
+	'How do you leave an idiot in suspense?'
+];
+
+
 
 	const args = msg.content.slice(prefix.length).trim().split(/ +/g);
  	const cmd = args.shift().toLowerCase();
 
-	if(cmd === 'joke'){
-		msg.channel.send('Two neutrons walk into a bar, and the bartender says \"No charge for you.\"');
-	}
+	switch (cmd) {
+  case "joke" :
+		let i = Math.floor(Math.random()*jokes.length)
+    msg.channel.send(jokes[i]);
+    break;
 
-	else if(cmd === 'greet'){
-		msg.channel.send("Hi, "+msg.author.toString()+"!");
-	}
+  case "greet" :
+    msg.channel.send("Hi, "+msg.author.toString()+"!");
+    break;
 
-	else if(cmd.startsWith("8ball")){
+	case "8ball":
 		let i = answers[Math.floor(Math.random()*answers.length)];
 		const embed = {//this is an embed object
-  "color": 0xffaeff,
-  "author": {
-    "name": `Magic 8 Ball`,
-    "icon_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/8_ball_icon.svg/2000px-8_ball_icon.svg.png"
-  },
-  "fields": [
-    {
-      "name": "The Magic 8 Ball Says...",
-      "value": `${i}.`
-    }
-  ]
-};
-msg.channel.send({ embed });
+		"color": 0xffaeff,
+		"author": {
+		"name": `Magic 8 Ball`,
+		"icon_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/8_ball_icon.svg/2000px-8_ball_icon.svg.png"
+			},
+		"fields": [
+			{
+				"name": "The Magic 8 Ball Says...",
+				"value": `${i}.`
+			}
+		]
+		};
+	msg.channel.send({ embed });
+		break;
+
+		case "pick":
+			const choices = msg.content.slice(prefix.length).trim().split(",");//requires that the choices be comma separated
+			const picker = choices.shift().toLowerCase();
+
+			let rand = Math.floor(Math.random()*choices.length);
+			let choice = choices[rand];
+
+			msg.channel.send("I choose:"+choice);
+			break;
+/*
+
+	else if(cmd.startsWith("8ball")){
+
 	}
 
 
 	else if(cmd === 'pick'){
 		//Implement a pick command.Takes a list of items after !pick and randomly picks one.
-		const choices = msg.content.slice(prefix.length).trim().split(",");//requires that the choices be comma separated
-	 	const picker = choices.shift().toLowerCase();
 
-		let rand = Math.floor(Math.random()*choices.length);
-
-		let choice = choices[rand];
-
-		msg.channel.send("I choose:"+choice);
-	}
+	}*/
 
 
 	});
