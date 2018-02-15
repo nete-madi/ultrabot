@@ -1,14 +1,16 @@
 const Discord = require('discord.js'); //implements discord.js library
 const bot = new Discord.Client();
 
-bot.on('ready',()=>{
-		bot.user.setPresence({ status: 'online', game: { name: 'Github: whatsupdawg' } });
-})
 
 var http = require("http");
 setInterval(function() {
     http.get("http://ultra-bot-.herokuapp.com");
-}, 300000);
+}, 180000); //pings bot every 3 minutes
+
+
+bot.on('ready',()=>{
+		bot.user.setPresence({ status: 'online', game: { name: 'Github: whatsupdawg' } });
+})
 
 
 bot.on('message', msg =>{//object of type message, named "messsage"
