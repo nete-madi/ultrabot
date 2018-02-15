@@ -99,6 +99,7 @@ var jokes = [
 			const args = msg.content.slice(prefix.length).trim().split(/ +/g);
 				if(args = "one"){
 					member.addRole(one).catch(console.error);
+					msg.channel.send("Done!");
 				}
 
 		}//end of switch block
