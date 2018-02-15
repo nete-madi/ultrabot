@@ -1,19 +1,17 @@
 const Discord = require('discord.js'); //implements discord.js library
 const bot = new Discord.Client();
 
-
-var http = require("http");
-setInterval(function() {
-    http.get("http://ultra-bot-.herokuapp.com");
-}, 180000); //pings bot every 3 minutes
-
-
 bot.on('ready',()=>{
 		bot.user.setPresence({ status: 'online', game: { name: 'Github: whatsupdawg' } });
 })
 
+var http = require("http");
+setInterval(function() {
+    http.get("http://ultra-bot-.herokuapp.com");
+}, 300000); //pings bot every 5 minutes to make sure it stays online
 
-bot.on('message', msg =>{//object of type message, named "messsage"
+
+bot.on('message', msg =>{
 
 	var prefix = ".";
 
@@ -62,7 +60,7 @@ var jokes = [
     break;
 
   case "greet" :
-    msg.channel.send("Hi, "+msg.author.toString()+"!");
+    msg.channel.send(`Hi, ${msg.author.username}!`);
     break;
 
 	case "8ball":
@@ -80,7 +78,7 @@ var jokes = [
 			}
 		]
 		};
-	msg.channel.send({ embed });
+		msg.channel.send({ embed });
 		break;
 
 		case "pick":
@@ -92,6 +90,17 @@ var jokes = [
 
 			msg.channel.send("I choose:"+choice);
 			break;
+
+		case "setrole":
+			let one = msg.guild.roles.find("name", "one");
+			let two = msg.guild.roles.find("name", "two");
+			let three = msg.guild.roles.find("name", "three");
+
+			const args = msg.content.slice(prefix.length).trim().split(/ +/g);
+				if(args = "one"){
+					member.addRole(one).catch(console.error);
+				}
+
 		}//end of switch block
 
 	});
