@@ -91,26 +91,15 @@ var jokes = [
 			msg.channel.send("I choose:"+choice);
 			break;
 
-		/*case "getrole":
-			/*let one = msg.guild.roles.find("name", "one");
-			let two = msg.guild.roles.find("name", "two");
-			let three = msg.guild.roles.find("name", "three");*/
-
-			/*const args = msg.content.slice(prefix.length).trim().split(/ +/g);
-				if(args = "one"){
-					member.addRole(one).catch(console.error);
-					msg.channel.send("Done!");
-				}
-
-				if(message.member.roles.has("name","bot trash queen")) {
-  console.log(`Yay, the author of the message has the role!`);
+		case "getrole":
+		if(message.member.roles.has(196796210164662273)) {
+msg.channel.send(`Yay, the author of the message has the role!`);
 } else {
-  console.log(`Nope, noppers, nadda.`);
+msg.channel.send(`Nope, noppers, nadda.`);
 }
-break;*/
 
 		}//end of switch block
 
 	});
 
-bot.login(process.env.BOT_TOKEN);//utilizes login token, config.token is used instead of the actual token
+bot.login(process.env.BOT_TOKEN);
