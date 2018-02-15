@@ -1,5 +1,6 @@
 const Discord = require('discord.js'); //implements discord.js library
 const bot = new Discord.Client();
+const config = require('./config.json');
 
 bot.on('ready',()=>{
 		bot.user.setPresence({ status: 'online', game: { name: 'Github: whatsupdawg' } });
@@ -91,16 +92,23 @@ var jokes = [
 			msg.channel.send("I choose:"+choice);
 			break;
 
-		case "setrole":
-			let one = msg.guild.roles.find("name", "one");
+		case "getrole":
+			/*let one = msg.guild.roles.find("name", "one");
 			let two = msg.guild.roles.find("name", "two");
-			let three = msg.guild.roles.find("name", "three");
+			let three = msg.guild.roles.find("name", "three");*/
 
-			const args = msg.content.slice(prefix.length).trim().split(/ +/g);
+			/*const args = msg.content.slice(prefix.length).trim().split(/ +/g);
 				if(args = "one"){
 					member.addRole(one).catch(console.error);
 					msg.channel.send("Done!");
-				}
+				}*/
+
+				if(message.member.roles.has("name","bot trash queen")) {
+  msg.channel.send(`Yay, the author of the message has the role!`);
+} else {
+  msg.channel.send(`Nope, noppers, nadda.`);
+}
+break;
 
 		}//end of switch block
 
