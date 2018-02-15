@@ -5,6 +5,11 @@ bot.on('ready',()=>{
 		bot.user.setPresence({ status: 'online', game: { name: 'Github: whatsupdawg' } });
 })
 
+var http = require("http");
+setInterval(function() {
+    http.get("http://ultra-bot-.herokuapp.com");
+}, 300000);
+
 
 bot.on('message', msg =>{//object of type message, named "messsage"
 
