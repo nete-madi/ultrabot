@@ -6,9 +6,9 @@ bot.on('ready',()=>{
 })
 
 
-bot.on('message', msg =>{//object of type message, named "messsage"
+bot.on('message', msg =>{
 
-	var prefix = ".";
+	var prefix = "."; //The prefix is '!', but for some reason it only works when the prefix is defined as '.' .
 
 	if(msg.content.startsWith(prefix)) return;
 	if(msg.author === bot.user) return;//This is a check to make sure that the message is coming from a user so the bot does not respond to itself.
@@ -85,19 +85,8 @@ var jokes = [
 
 			msg.channel.send("I choose:"+choice);
 			break;
-/*
-
-	else if(cmd.startsWith("8ball")){
-
-	}
-
-
-	else if(cmd === 'pick'){
-		//Implement a pick command.Takes a list of items after !pick and randomly picks one.
-
-	}*/
 
 
 	});
 
-bot.login(process.env.BOT_TOKEN);//utilizes login token, config.token is used instead of the actual token
+bot.login(process.env.BOT_TOKEN);
