@@ -60,7 +60,7 @@ var jokes = [
     break;
 
   case "greet" :
-    msg.channel.send(`Hi, ${msg.author.username}!`);
+    msg.channel.send("Hi, "+msg.author.toString()+"!");
     break;
 
 	case "8ball":
