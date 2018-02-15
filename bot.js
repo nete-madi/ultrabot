@@ -6,9 +6,9 @@ bot.on('ready',()=>{
 })
 
 
-bot.on('message', msg =>{
+bot.on('message', msg =>{//object of type message, named "messsage"
 
-	var prefix = "."; //The prefix is '!', but for some reason it only works when the prefix is defined as '.' .
+	var prefix = ".";
 
 	if(msg.content.startsWith(prefix)) return;
 	if(msg.author === bot.user) return;//This is a check to make sure that the message is coming from a user so the bot does not respond to itself.
@@ -59,7 +59,7 @@ var jokes = [
     break;
 
 	case "8ball":
-		let i = answers[Math.floor(Math.random()*answers.length)];
+		let j = answers[Math.floor(Math.random()*answers.length)];
 		const embed = {//this is an embed object
 		"color": 0xffaeff,
 		"author": {
@@ -69,7 +69,7 @@ var jokes = [
 		"fields": [
 			{
 				"name": "The Magic 8 Ball Says...",
-				"value": `${i}.`
+				"value": `${j}.`
 			}
 		]
 		};
@@ -85,8 +85,8 @@ var jokes = [
 
 			msg.channel.send("I choose:"+choice);
 			break;
-
+		}//end of switch block
 
 	});
 
-bot.login(process.env.BOT_TOKEN);
+bot.login(process.env.BOT_TOKEN);//utilizes login token, config.token is used instead of the actual token
