@@ -92,7 +92,8 @@ var jokes = [
 			break;
 
 		case "getrole":
-			if(message.member.roles.has("196796210164662273")) {
+			let roleid = "196796210164662273";
+			if(msg.member.roles.has(roleid)) {
 				msg.channel.send(`Yay, the author of the message has the role!`);
 			} else {
 				msg.channel.send(`Nope, noppers, nadda.`);
