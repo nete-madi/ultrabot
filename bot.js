@@ -92,7 +92,7 @@ var jokes = [
 			break;
 
 		case "getrole":
-			let admin = msg.guild.roles.find("name", "bot trash queen");
+			let admin  = msg.guild.roles.get("196796210164662273");
 			if(msg.author.roles.has(admin)) {
 				msg.channel.send(`You have this role!`);
 			} else {
