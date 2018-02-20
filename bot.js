@@ -96,10 +96,13 @@ var jokes = [
 			if(msg.member.roles.has(roleid)) {
 				msg.channel.send(`You have this role!`);
 			} else {
-				msg.channel.send(`You do not have this role.`);
+				msg.channel.send(`You do not have the role ${roleid}.`);
 			}
 			break;
 
+		default:
+			msg.channel.send("Sorry, didn't catch that!");
+			break;
 
 		}//end of switch block
 
