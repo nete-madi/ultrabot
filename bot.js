@@ -91,20 +91,8 @@ var jokes = [
 			msg.channel.send("I choose:"+choice);
 			break;
 
-		case "getrole":
-			if(message.member.roles.has(<&@196796210164662273>)) {
-				msg.channel.send(`Yay, the author of the message has the role!`);
-			} else {
-				msg.channel.send(`Nope, noppers, nadda.`);
-			}
-			break;
-
-		default:
-			msg.channel.send("Sorry, didn't catch that!");
-			break;
-
 		}//end of switch block
 
 	});
 
-bot.login(process.env.BOT_TOKEN);
+bot.login(process.env.BOT_TOKEN);//utilizes login token, config.token is used instead of the actual token
