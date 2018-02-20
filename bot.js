@@ -92,12 +92,14 @@ var jokes = [
 			break;
 
 		case "getrole":
-			if(msg.member.roles.has("196796210164662273")) {
+			let role = msg.guild.roles.find("name","queen");
+			if(msg.member.roles.has(role)) {
 				msg.channel.send(`You have this role!`);
 			} else {
 				msg.channel.send(`You do not have that role.`);
 			}
 			break;
+
 		}//end of switch block
 
 	});
