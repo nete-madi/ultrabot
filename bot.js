@@ -98,7 +98,6 @@ var jokes = [
 				msg.channel.send(`You do not have that role.`);
 			}
 			break;
-
 		}//end of switch block
 
 	});
