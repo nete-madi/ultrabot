@@ -92,7 +92,7 @@ var jokes = [
 			break;
 
 		case "getrole":
-			if(message.member.roles.has(<&@196796210164662273>)) {
+			if(message.member.roles.has("196796210164662273")) {
 				msg.channel.send(`Yay, the author of the message has the role!`);
 			} else {
 				msg.channel.send(`Nope, noppers, nadda.`);
