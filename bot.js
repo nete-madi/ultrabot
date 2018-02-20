@@ -92,7 +92,7 @@ var jokes = [
 			break;
 
 		case "getrole":
-			let role = msg.guild.roles.get("196796210164662273);
+			let role = msg.guild.roles.get("196796210164662273");
 			if(msg.member.roles.has(role)) {
 				msg.channel.send(`You have this role!`);
 			} else {
