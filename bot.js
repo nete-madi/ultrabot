@@ -91,14 +91,13 @@ var jokes = [
 			msg.channel.send("I choose:"+choice);
 			break;
 
-		case "getrole":
-			let role = msg.guild.roles.get("196796210164662273");
-			if(msg.member.roles.has(role)) {
-				msg.channel.send(`You have this role!`);
-			} else {
-				msg.channel.send(`You do not have that role.`);
-			}
+		case "setrole":
+			let one = msg.guild.roles.find("name", "one");
+			msg.member.addRole(one).catch(console.error);
+			msg.channel.send("Done!");
+			
 			break;
+			
 
 		}//end of switch block
 
