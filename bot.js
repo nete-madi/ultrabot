@@ -91,11 +91,36 @@ var jokes = [
 			msg.channel.send("I choose:"+choice);
 			break;
 
-		case "setrole":
-			let one = msg.guild.roles.find("name", "one");
-			msg.member.addRole(one).catch(console.error);
-			msg.channel.send("Done!");
 			
+		case "userinfo":
+		const embed = {//this is an embed object
+		"color": 0xffaeff,
+		"author": {
+		"name": `User info for ${user.username}`,
+		"icon_url": `${user.avatarURL}`
+			},
+		"fields": [
+			{
+				"name": "Username:",
+				"value": `${user.username}`,
+				"inline": "true"
+			}
+			{
+				"name": "User ID: ",
+				"value": `${user.user.id}`,
+				"inline": "true"
+			}
+			{
+				"name": "Currently playing:",
+				"value": `${user.game}.`
+			}
+			{
+				"name": "Status:",
+				"value": `${user.status}.`
+			}
+		]
+		};
+		msg.channel.send({ embed });
 			break;
 			
 
