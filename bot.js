@@ -110,14 +110,6 @@ var jokes = [
 				"value": `${user.user.id}`,
 				"inline": "true"
 			}
-			{
-				"name": "Currently playing:",
-				"value": `${user.game}.`
-			}
-			{
-				"name": "Status:",
-				"value": `${user.status}.`
-			}
 		]
 		};
 		msg.channel.send({ embed });
