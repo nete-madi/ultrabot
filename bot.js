@@ -91,31 +91,6 @@ var jokes = [
 			msg.channel.send("I choose:"+choice);
 			break;
 
-			
-		case "userinfo":
-		const embed = {//this is an embed object
-		"color": 0xffaeff,
-		"author": {
-		"name": `User info for ${user.username}`,
-		"icon_url": `${user.avatarURL}`
-			},
-		"fields": [
-			{
-				"name": "Username:",
-				"value": `${user.username}`,
-				"inline": "true"
-			}
-			{
-				"name": "User ID: ",
-				"value": `${user.user.id}`,
-				"inline": "true"
-			}
-		]
-		};
-		msg.channel.send({ embed });
-			break;
-			
-
 		}//end of switch block
 
 	});
