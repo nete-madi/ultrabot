@@ -65,7 +65,7 @@ var jokes = [
 
 	case "8ball":
 		let j = answers[Math.floor(Math.random()*answers.length)];
-		const embed = {//this is an embed object
+		const sfgsdg = {//this is an embed object
 		"color": 0xffaeff,
 		"author": {
 		"name": `Magic 8 Ball`,
@@ -78,7 +78,7 @@ var jokes = [
 			}
 		]
 		};
-		msg.channel.send({ embed });
+		msg.channel.send({ sfgsdg });
 		break;
 
 	case "pick":
@@ -92,7 +92,7 @@ var jokes = [
 		break;
 
 
-/*	case "userinfo":
+	case "userinfo":
 		const infoembed = {
 		  "color": 8485318,
 		  "timestamp": "2018-04-29T23:19:02.862Z",
@@ -119,7 +119,7 @@ var jokes = [
 		  ]
 		};
 			msg.channel.send({ infoembed });
-			break;*/
+			break;
 
 
 		}//end of switch block
