@@ -65,7 +65,7 @@ var jokes = [
 
 	case "8ball":
 		let j = answers[Math.floor(Math.random()*answers.length)];
-		const embed:ball = {//this is an embed object
+		const embed = {//this is an embed object
 		"color": 0xffaeff,
 		"author": {
 		"name": `Magic 8 Ball`,
