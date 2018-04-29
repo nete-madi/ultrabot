@@ -92,7 +92,7 @@ var jokes = [
 		break;
 
 
-	case "userinfo":
+	/*case "userinfo":
 		const embed = {
 		  "color": 8485318,
 		  "timestamp": "2018-04-29T23:19:02.862Z",
@@ -119,7 +119,7 @@ var jokes = [
 		  ]
 		};
 			msg.channel.send({ embed });
-			break;
+			break;*/
 
 
 		}//end of switch block
