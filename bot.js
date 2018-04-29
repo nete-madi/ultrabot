@@ -96,25 +96,25 @@ var jokes = [
 		const info = {
 		  "color": 0xffaeff,
 			"author": {
-			"name": `User Information for ${user.username}`,
+			"name": `User Information for the user who requested this embed.`,
 				},
 		  "fields": [
 		    {
 		      "name": "Username: ",
-		      "value": `${user.username}`,
+		      "value": `Your username.`,
 		    },
 		    {
 		      "name": "User ID: ",
-		      "value": `${user.user.id}`
+		      "value": `Your ID.`
 		    },
 		    {
 		      "name": "Currently playing:",
-		      "value": `${user.game}`
+		      "value": `A game!`
 		      "inline": true
 		    },
 		    {
 		      "name": "Status",
-		      "value": `${user.presence.status}`,
+		      "value": `Probably.online.`,
 		      "inline": true
 		    }
 		  ]
