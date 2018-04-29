@@ -93,34 +93,35 @@ var jokes = [
 
 
 		case "userinfo":
-		const embedtwo = {//this is an embed object
+			msg.channel.send({ embed: {//this is an embed object
 		"color": 0xffaeff,
 		"author": {
-		"name": "User Information",
-		//"icon_url": `${user.avatarURL}`
+		"name": `User info for ${user.username}`,
+		"icon_url": `${user.avatarURL}`
 			},
 		"fields": [
 			{
 				"name": "Username:",
-				"value": "Your username goes here.",
+				"value": `${user.username}`,
 				"inline": "true"
 			},
 			{
 				"name": "User ID: ",
-				"value": "This is your user id.",
+				"value": `${user.user.id}`,
 				"inline": "true"
 			},
 			{
 				"name": "Currently playing:",
-				"value": "A really fun game!!"
+				"value": `${user.game}.`
 			},
 			{
 				"name": "Status:",
-				"value": "Probably online."
+				"value": `${user.status}.`
 			}
 		]
-		};
-		msg.channel.send({ embedtwo });
+		}
+}
+);
 			break;
 
 
