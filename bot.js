@@ -96,7 +96,7 @@ var jokes = [
 		const embedtwo = {//this is an embed object
 		"color": 0xffaeff,
 		"author": {
-		"name": `User info for ${user.username}`,
+		"name": "User Information",
 		"icon_url": `${user.avatarURL}`
 			},
 		"fields": [
@@ -121,7 +121,7 @@ var jokes = [
 		]
 		};
 		msg.channel.send({ embedtwo });
-			break;*/
+			break;
 
 
 		}//end of switch block
