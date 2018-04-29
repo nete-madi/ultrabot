@@ -91,6 +91,39 @@ var jokes = [
 			msg.channel.send("I choose:"+choice);
 			break;
 
+
+		case "userinfo":
+		const embedtwo = {//this is an embed object
+		"color": 0xffaeff,
+		"author": {
+		"name": `User info for ${user.username}`,
+		"icon_url": `${user.avatarURL}`
+			},
+		"fields": [
+			{
+				"name": "Username:",
+				"value": `${user.username}`,
+				"inline": "true"
+			},
+			{
+				"name": "User ID: ",
+				"value": `${user.user.id}`,
+				"inline": "true"
+			},
+			{
+				"name": "Currently playing:",
+				"value": `${user.game}.`
+			},
+			{
+				"name": "Status:",
+				"value": `${user.status}.`
+			}
+		]
+		};
+		msg.channel.send({ embedtwo });
+			break;
+
+
 		}//end of switch block
 
 	});
