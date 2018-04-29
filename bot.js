@@ -63,7 +63,7 @@ var jokes = [
     msg.channel.send("Hi, "+msg.author.toString()+"!");
     break;
 
-	/*case "8ball":
+	case "8ball":
 		let j = answers[Math.floor(Math.random()*answers.length)];
 		const embed = {//this is an embed object
 		"color": 0xffaeff,
@@ -79,7 +79,7 @@ var jokes = [
 		]
 		};
 		msg.channel.send({ embed });
-		break;*/
+		break;
 
 	case "pick":
 		const choices = msg.content.slice(prefix.length).trim().split(",");//requires that the choices be comma separated
@@ -93,7 +93,7 @@ var jokes = [
 
 
 	case "userinfo":
-		const twoembed = {
+		const embed = {
 		  "color": 8485318,
 		  "timestamp": "2018-04-29T23:19:02.862Z",
 		  "fields": [
@@ -118,7 +118,7 @@ var jokes = [
 		    }
 		  ]
 		};
-			msg.channel.send({ twoembed });
+			msg.channel.send({ embed });
 			break;
 
 
