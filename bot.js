@@ -92,31 +92,31 @@ var jokes = [
 			break;
 
 
-		/*case "userinfo":
+		case "userinfo":
 		const embedtwo = {//this is an embed object
 		"color": 0xffaeff,
 		"author": {
 		"name": "User Information",
-		"icon_url": `${user.avatarURL}`
+		//"icon_url": `${user.avatarURL}`
 			},
 		"fields": [
 			{
 				"name": "Username:",
-				"value": `${user.username}`,
+				"value": "Your username goes here.",
 				"inline": "true"
 			},
 			{
 				"name": "User ID: ",
-				"value": `${user.user.id}`,
+				"value": "This is your user id.",
 				"inline": "true"
 			},
 			{
 				"name": "Currently playing:",
-				"value": `${user.game}.`
+				"value": "A really fun game!!"
 			},
 			{
 				"name": "Status:",
-				"value": `${user.status}.`
+				"value": "Probably online."
 			}
 		]
 		};
