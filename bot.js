@@ -93,7 +93,7 @@ var jokes = [
 
 
 	case "userinfo":
-		const embed = {
+		const twoembed = {
 		  "color": 8485318,
 		  "timestamp": "2018-04-29T23:19:02.862Z",
 		  "fields": [
@@ -118,7 +118,7 @@ var jokes = [
 		    }
 		  ]
 		};
-			msg.channel.send({ embed });
+			msg.channel.send({ twoembed });
 			break;
 
 
