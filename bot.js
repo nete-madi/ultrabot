@@ -65,7 +65,7 @@ var jokes = [
 
 	case "8ball":
 		let j = answers[Math.floor(Math.random()*answers.length)];
-		const ball = {//this is an embed object
+		const embed:ball = {//this is an embed object
 		"color": 0xffaeff,
 		"author": {
 		"name": `Magic 8 Ball`,
@@ -92,34 +92,35 @@ var jokes = [
 		break;
 
 
-/*	case "userinfo":
-		const infoembed = {
-		  "color": 8485318,
-		  "timestamp": "2018-04-29T23:19:02.862Z",
+	case "userinfo":
+		const info = {
+		  "color": 0xffaeff,
+			"author": {
+			"name": `User Information for ${user.username}`,
+				},
 		  "fields": [
 		    {
-		      "name": "Username",
-		      "value": "This is your username.",
-		      "inline": true
+		      "name": "Username: ",
+		      "value": `${user.username}`,
 		    },
 		    {
-		      "name": "User ID",
-		      "value": "This is your user id."
+		      "name": "User ID: ",
+		      "value": `${user.user.id}`
 		    },
 		    {
 		      "name": "Currently playing:",
-		      "value": "A really fun game!",
+		      "value": `${user.game}`
 		      "inline": true
 		    },
 		    {
 		      "name": "Status",
-		      "value": "Probably online.",
+		      "value": `${user.presence.status}`,
 		      "inline": true
 		    }
 		  ]
 		};
-			msg.channel.send({ infoembed });
-			break;*/
+			msg.channel.send({ embed: info });
+			break;
 
 
 		}//end of switch block
