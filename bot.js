@@ -81,47 +81,44 @@ var jokes = [
 		msg.channel.send({ embed });
 		break;
 
-		case "pick":
-			const choices = msg.content.slice(prefix.length).trim().split(",");//requires that the choices be comma separated
-			const picker = choices.shift().toLowerCase();
+	case "pick":
+		const choices = msg.content.slice(prefix.length).trim().split(",");//requires that the choices be comma separated
+		const picker = choices.shift().toLowerCase();
 
-			let rand = Math.floor(Math.random()*choices.length);
-			let choice = choices[rand];
+		let rand = Math.floor(Math.random()*choices.length);
+		let choice = choices[rand];
 
-			msg.channel.send("I choose:"+choice);
-			break;
+		msg.channel.send("I choose:"+choice);
+		break;
 
 
-		case "userinfo":
-			msg.channel.send({ embed: {//this is an embed object
-		"color": 0xffaeff,
-		"author": {
-		"name": `User info for ${user.username}`,
-		"icon_url": `${user.avatarURL}`
-			},
-		"fields": [
-			{
-				"name": "Username:",
-				"value": `${user.username}`,
-				"inline": "true"
-			},
-			{
-				"name": "User ID: ",
-				"value": `${user.user.id}`,
-				"inline": "true"
-			},
-			{
-				"name": "Currently playing:",
-				"value": `${user.game}.`
-			},
-			{
-				"name": "Status:",
-				"value": `${user.status}.`
-			}
-		]
-		}
-}
-);
+	case "userinfo":
+		const infoembed = {
+		  "color": 8485318,
+		  "timestamp": "2018-04-29T23:19:02.862Z",
+		  "fields": [
+		    {
+		      "name": "Username",
+		      "value": "This is your username.",
+		      "inline": true
+		    },
+		    {
+		      "name": "User ID",
+		      "value": "This is your user id."
+		    },
+		    {
+		      "name": "Currently playing:",
+		      "value": "A really fun game!",
+		      "inline": true
+		    },
+		    {
+		      "name": "Status",
+		      "value": "Probably online.",
+		      "inline": true
+		    }
+		  ]
+		};
+			msg.channel.send({ infoembed });
 			break;
 
 
