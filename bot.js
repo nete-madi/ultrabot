@@ -2,7 +2,7 @@ const Discord = require('discord.js'); //implements discord.js library
 const bot = new Discord.Client();
 
 bot.on('ready',()=>{
-		bot.user.setPresence({ status: 'online', game: { name: 'Github: whatsupdawg' } });
+		bot.user.setPresence({ status: 'online', game: { name: '!help for command list' } });
 })
 
 var http = require("http");
@@ -12,6 +12,7 @@ setInterval(function() {
 
 
 bot.on('message', msg =>{
+
 
 	var prefix = ".";
 
@@ -78,7 +79,7 @@ var jokes = [
 			}
 		]
 		};
-		msg.channel.send({ embed: ball });
+		msg.channel.send({ embed});
 		break;
 
 	case "pick":
@@ -90,6 +91,9 @@ var jokes = [
 
 		msg.channel.send("I choose:"+choice);
 		break;
+
+		case "help":
+			msg.channel.send("UltraBot v2.2 by whatsdowndawg#5241\nCommands:\n!greet: Say hello!\n!joke: Tells a joke.\n!8ball: Consult the 8 Ball gods.\n!pick: Pick between a list of comma separated objects.");
 
 
 	/*case "userinfo":
@@ -120,8 +124,8 @@ var jokes = [
 		  ]
 		};
 			msg.channel.send({ embed: info });
-			break;
-*/
+			break;*/
+
 
 		}//end of switch block
 
