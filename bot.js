@@ -93,7 +93,7 @@ var jokes = [
 		break;
 
 		case "help":
-			msg.channel.send("UltraBot v2.2 by whatsdowndawg#5241\nCommands:\n!greet: Say hello!\n!joke: Tells a joke.\n!8ball: Consult the 8 Ball gods.\n!pick: Pick between a list of comma separated objects.");
+			msg.channel.send("UltraBot v2.2.1 by whatsdowndawg#5241\n\n\nCommands:\n!greet: Say hello!\n!joke: Tells a joke.\n!8ball: Consult the 8 Ball gods.\n!pick: Pick between a list of comma separated objects.");
 
 
 	/*case "userinfo":
