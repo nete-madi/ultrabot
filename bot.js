@@ -104,9 +104,8 @@ var jokes = [
 				"name": `User Information for ${msg.author.username}.`,
 				"icon_url": `${bot.user.avatarURL}`
 				},
-				"image":{
-					"url": `${msg.author.avatarURL}`,
-					"inline":true
+				"thumbnail":{
+					"url": `${msg.author.avatarURL}`
 				},
 		  "fields": [
 		    {
