@@ -106,7 +106,7 @@ var jokes = [
 		  "fields": [
 		    {
 		      "name": "Username: ",
-		      "value": `Your username.`,
+		      "value": `${msg.author.toString()}`
 		    },
 		    {
 		      "name": "User ID: ",
@@ -127,6 +127,8 @@ var jokes = [
 			msg.channel.send({ embed:info });
 			break;
 
+		default:
+			msg.channel.send("Command not recognized.");
 
 		}//end of switch block
 
