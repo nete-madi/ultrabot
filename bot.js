@@ -106,7 +106,7 @@ var jokes = [
 		  "fields": [
 		    {
 		      "name": "Username: ",
-		      "value": `${msg.author.toString()}`
+		      "value": `${msg.author}`
 		    },
 		    {
 		      "name": "User ID: ",
