@@ -128,7 +128,7 @@ var jokes = [
 			break;
 
 		default:
-			msg.channel.send("Command not recognized.");
+			msg.channel.send("Whoops! I can't do that.");
 
 		}//end of switch block
 
