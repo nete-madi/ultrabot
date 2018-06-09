@@ -117,17 +117,16 @@ var jokes = [
 		      "value": `${msg.author.id}`
 		    },
 		    {
-		      "name": "Currently playing:",
-		      "value": `${msg.author.presence.game}`,
-		      "inline": true
-		    },
-		    {
 		      "name": "Status: ",
 		      "value": `${msg.author.presence.status}`,
 		      "inline": true
 		    }
 		  ]
 		};
+
+		if(msg.author.presence.game != null){
+			info.addField("Currently playing: ",`${msg.author.presence.game}` )
+		}
 			msg.channel.send({ embed:info });
 			break;
 
