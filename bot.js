@@ -68,7 +68,7 @@ var jokes = [
 
 	case "8ball":
 		let j = answers[Math.floor(Math.random()*answers.length)];
-		const ball = {//this is an embed object
+		const embed = {//this is an embed object
 		"color": 0xffaeff,
 		"author": {
 		"name": `Magic 8 Ball`,
@@ -81,7 +81,7 @@ var jokes = [
 			}
 		]
 		};
-		msg.channel.send({ball});
+		msg.channel.send({embed});
 		break;
 
 	case "pick":
