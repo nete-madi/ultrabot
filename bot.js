@@ -101,7 +101,8 @@ var jokes = [
 		const info = {
 		  "color": 0xffaeff,
 			"author": {
-			"name": `User Information for ${msg.author.username}.`,
+				"name": `User Information for ${msg.author.username}.`,
+				"icon_url": `${msg.author.avatarURL}`
 				},
 		  "fields": [
 		    {
@@ -119,7 +120,7 @@ var jokes = [
 		    },
 		    {
 		      "name": "Status",
-		      "value": `Probably online.`,
+		      "value": `${msg.author.presence}`,
 		      "inline": true
 		    }
 		  ]
