@@ -101,16 +101,16 @@ var jokes = [
 		const info = {
 		  "color": 0xffaeff,
 			"author": {
-			"name": `User Information for ${msg.author.username}#${msg.author.discriminator}.`,
+			"name": `User Information for ${msg.author.username}.`,
 				},
 		  "fields": [
 		    {
 		      "name": "Username: ",
-		      "value": `${msg.author.username}`
+		      "value": `${msg.author.username}#${msg.author.discriminator}`
 		    },
 		    {
 		      "name": "User ID: ",
-		      "value": `${msg.author.userid}`
+		      "value": `${msg.author.id}`
 		    },
 		    {
 		      "name": "Currently playing:",
@@ -119,7 +119,7 @@ var jokes = [
 		    },
 		    {
 		      "name": "Status",
-		      "value": `Probably.online.`,
+		      "value": `Probably online.`,
 		      "inline": true
 		    }
 		  ]
