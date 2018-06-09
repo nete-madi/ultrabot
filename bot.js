@@ -115,7 +115,7 @@ var jokes = [
 		    },
 		    {
 		      "name": "Currently playing:",
-		      "value": `A game!`,
+		      "value": `${msg.author.presence.game}`,
 		      "inline": true
 		    },
 		    {
