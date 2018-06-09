@@ -119,8 +119,8 @@ var jokes = [
 		      "inline": true
 		    },
 		    {
-		      "name": "Status",
-		      "value": `${msg.author.presence}`,
+		      "name": "Status: ",
+		      "value": `${msg.author.presence.status}`,
 		      "inline": true
 		    }
 		  ]
