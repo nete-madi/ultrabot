@@ -92,7 +92,7 @@ var jokes = [
 		break;
 
 
-	case "userinfo":
+	/*case "userinfo":
 		const info = {
 		  "color": 0xffaeff,
 			"author": {
@@ -121,7 +121,7 @@ var jokes = [
 		};
 			msg.channel.send({ embed: info });
 			break;
-
+*/
 
 		}//end of switch block
 
