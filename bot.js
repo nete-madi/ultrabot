@@ -101,7 +101,7 @@ var jokes = [
 		const info = {
 		  "color": 0xffaeff,
 			"author": {
-			"name": `User Information for the user who requested this embed.`,
+			"name": `User Information for ${msg.author.username}#${msg.author.discriminator}.`,
 				},
 		  "fields": [
 		    {
@@ -110,7 +110,7 @@ var jokes = [
 		    },
 		    {
 		      "name": "User ID: ",
-		      "value": `Your ID.`
+		      "value": `${msg.author.userid}`
 		    },
 		    {
 		      "name": "Currently playing:",
