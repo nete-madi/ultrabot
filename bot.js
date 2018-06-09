@@ -101,11 +101,12 @@ var jokes = [
 		const info = {
 		  "color": 0xffaeff,
 			"author": {
-				"name": `User Information for ${msg.author.username}.`
+				"name": `User Information for ${msg.author.username}.`,
+				"icon_url": `${bot.user.avatarURL}`
 				},
 				"image":{
 					"url": `${msg.author.avatarURL}`
-				}
+				},
 		  "fields": [
 		    {
 		      "name": "Username: ",
