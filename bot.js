@@ -55,18 +55,20 @@ var jokes = [
  	const cmd = args.shift().toLowerCase();
 
 	switch (cmd) {
+			
+  case "greet" :
+    msg.channel.send("Hi, "+msg.author.toString()+"!");
+    break;
+			
   case "joke" :
 		let i = Math.floor(Math.random()*jokes.length)
     msg.channel.send(jokes[i]);
     break;
 
-  case "greet" :
-    msg.channel.send("Hi, "+msg.author.toString()+"!");
-    break;
 
 	case "8ball":
 		let j = answers[Math.floor(Math.random()*answers.length)];
-		const embed = {//this is an embed object
+		const embed:ball = {//this is an embed object
 		"color": 0xffaeff,
 		"author": {
 		"name": `Magic 8 Ball`,
@@ -79,7 +81,7 @@ var jokes = [
 			}
 		]
 		};
-		msg.channel.send({ embed});
+		msg.channel.send({ embed: ball});
 		break;
 
 	case "pick":
@@ -94,37 +96,6 @@ var jokes = [
 
 		case "help":
 			msg.channel.send("UltraBot v2.2.1 by whatsdowndawg#5241\n\n\nCommands:\n!greet: Say hello!\n!joke: Tells a joke.\n!8ball: Consult the 8 Ball gods.\n!pick: Pick between a list of comma separated objects.");
-
-
-	/*case "userinfo":
-		const info = {
-		  "color": 0xffaeff,
-			"author": {
-			"name": `User Information for the user who requested this embed.`,
-				},
-		  "fields": [
-		    {
-		      "name": "Username: ",
-		      "value": `Your username.`,
-		    },
-		    {
-		      "name": "User ID: ",
-		      "value": `Your ID.`
-		    },
-		    {
-		      "name": "Currently playing:",
-		      "value": `A game!`
-		      "inline": true
-		    },
-		    {
-		      "name": "Status",
-		      "value": `Probably.online.`,
-		      "inline": true
-		    }
-		  ]
-		};
-			msg.channel.send({ embed: info });
-			break;*/
 
 
 		}//end of switch block
