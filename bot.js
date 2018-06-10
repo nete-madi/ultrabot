@@ -98,7 +98,7 @@ var jokes = [
 
 
 	case "userinfo":
-		const info = {
+		let info = {
 		  "color": 0xffaeff,
 			"author": {
 				"name": `User Information for ${msg.author.username}.`,
@@ -124,8 +124,8 @@ var jokes = [
 		  ]
 		};
 
-		if(msg.author.presence.game != null){
-			info.addField("Currently playing: ",`${msg.author.presence.game}` )
+		if(msg.author.presence.game != "null"){
+			info.addField("Currently playing: ",`${msg.author.presence.game}`,false );
 		};
 			msg.channel.send({ embed:info });
 			break;
