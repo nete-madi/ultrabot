@@ -79,7 +79,7 @@ var jokes = [
 			}
 		]
 		};
-		msg.channel.send({ embed});
+		msg.channel.send({embed:ball});
 		break;
 
 	case "pick":
@@ -93,10 +93,11 @@ var jokes = [
 		break;
 
 		case "help":
-			const help = {"color": 0xffaeff,
+			const help = {
+			"color": 0xffaeff,
 			"author": {
 			"name": "UltraBot Command List",
-			"icon_url":`${client.user.avatarURL}`
+			"icon_url":`${bot.user.avatarURL}`
 				},
 			"fields": [
 				{
