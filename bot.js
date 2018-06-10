@@ -125,7 +125,10 @@ var jokes = [
 		};
 
 		if(msg.author.presence.game != "null"){
-			info.addField("Currently playing: ",`${msg.author.presence.game}`,false );
+			info.addField("Currently playing: ",`${msg.author.presence.game}`,true);
+		};
+		if(msg.author.presence.game == "null"){
+			info.addField("Currently playing: ","Nothing right now.",true );
 		};
 			msg.channel.send({ embed:info });
 			break;
