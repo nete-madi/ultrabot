@@ -93,7 +93,35 @@ var jokes = [
 		break;
 
 		case "help":
-			msg.channel.send("UltraBot v2.2.1 by whatsdowndawg#5241\n\nCommands:\n!greet: Say hello!\n!joke: Tells a joke.\n!8ball: Consult the 8 Ball gods.\n!pick: Pick between a list of comma separated objects.");
+			const help = {"color": 0xffaeff,
+			"author": {
+			"name": "UltraBot Command List",
+			"icon_url":`${client.user.avatarURL}`
+				},
+			"fields": [
+				{
+					"name": "!greet",
+					"value":"Say hello!"
+				},
+				{
+					"name": "!joke",
+					"value":"UltraBot will tell you a joke."
+				},
+				{
+					"name": "!8ball",
+					"value":"Consult the Magic 8 Ball gods with a question."
+				},
+				{
+					"name": "!pick",
+					"value":"Picks among a list of comma separated objects."
+				},
+				{
+					"name": "!userinfo",
+					"value":"Returns information about the user."
+				}
+			]
+			};
+			msg.channel.send({embed:help});
 			break;
 
 
@@ -124,7 +152,7 @@ var jokes = [
 		  ]
 		};
 
-		/*if(msg.author.presence.game != "null"){
+	/*	if(msg.author.presence.game != "null"){
 			info.addField("Currently playing: ",`${msg.author.presence.game}`,true);
 		};
 		if(msg.author.presence.game == "null"){
