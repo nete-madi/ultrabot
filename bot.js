@@ -14,7 +14,7 @@ setInterval(function() {
 bot.on('message', msg =>{
 
 
-	var prefix = ".";
+	var prefix = "!";
 
 	if(msg.content.startsWith(prefix)) return;
 	if(msg.author === bot.user) return;//This is a check to make sure that the message is coming from a user so the bot does not respond to itself.
@@ -153,17 +153,8 @@ var jokes = [
 		  ]
 		};
 
-	/*	if(msg.author.presence.game != "null"){
-			info.addField("Currently playing: ",`${msg.author.presence.game}`,true);
-		};
-		if(msg.author.presence.game == "null"){
-			info.addField("Currently playing: ","Nothing right now.",true );
-		};*/
 			msg.channel.send({ embed:info });
 			break;
-
-		default:
-			msg.channel.send("Whoops! I can't do that.");
 
 		}//end of switch block
 
