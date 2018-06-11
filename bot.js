@@ -10,7 +10,7 @@ setInterval(function() {
     http.get("http://ultra-bot-.herokuapp.com");
 }, 300000); //pings bot every 5 minutes to make sure it stays online
 
-let prefix = "!";
+let prefix = ".";
 
 bot.on('message', msg =>{
 
