@@ -13,7 +13,7 @@ setInterval(function() {
 
 bot.on('message', msg =>{
 
-	if(msg.content.startsWith("!")) return;
+	if(msg.content.startsWith("/!")) return;
 	if(msg.author === bot.user) return;//This is a check to make sure that the message is coming from a user so the bot does not respond to itself.
 
 		var answers = ['It is certain',
