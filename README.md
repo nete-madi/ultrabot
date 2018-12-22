@@ -8,4 +8,6 @@ Version 2.1.1:<br>
 -Generates a random Magic 8 Ball response when asked a question.<br>
 -Can randomly pick an item from a list of comma-separated items.<br>
 
-***more to come!***
+# In the works
+Role assignment
+???
