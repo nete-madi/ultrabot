@@ -54,9 +54,9 @@ var jokes = [
 
 	var search = require('youtube-search');
 	var opts ={
-		maxResults: 5
+		maxResults: 5,
 		key: 'AIzaSyCmx7svuUOrct6P-Celnsf0rSQ3AtIf7bo'
-	}
+	};
 
 	switch (cmd) {
   case "joke" :
@@ -161,11 +161,12 @@ var jokes = [
 			break;
 
 		case "youtube":
-			search(args.join(' ').substring(4), opts, function(err, results)){
-				if(err) return console.log(err);
-				msg.channel.sendMessage(results);
-				console.log(results[0].link);
-			}
+		search(args.join(' ').substring(4), opts, function(err, results) {
+    if(err) return console.log(err);
+  	msg.channel.send(results);
+  	console.log(results[0].link);
+  		})
+		break;
 	/*	let info = {
 			"color": 0xff0000,
 			"author": {
@@ -192,6 +193,5 @@ var jokes = [
 
 		}//end of switch block
 
-	});
 
 bot.login(process.env.BOT_TOKEN);
