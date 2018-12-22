@@ -54,7 +54,7 @@ var jokes = [
 
 	var search = require('youtube-search');
 	var opts ={
-		maxResults: 5;
+		maxResults: 5
 		key: "AIzaSyCmx7svuUOrct6P-Celnsf0rSQ3AtIf7bo"
 	}
 
