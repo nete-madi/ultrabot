@@ -63,7 +63,11 @@ var jokes = [
     break;
 
 	case "8ball":
-		let j = answers[Math.floor(Math.random()*answers.length)];
+		var req = new XMLHttpRequest();
+		req.open("GET", "ans.txt", false);
+		req.send(null);
+		var j = JSON.parse(req.responseText);
+		let k = j[Math.floor(Math.random()*j.length)];
 		const ball = {//this is an embed object
 		"color": 0xffaeff,
 		"author": {
@@ -73,7 +77,7 @@ var jokes = [
 		"fields": [
 			{
 				"name": "The Magic 8 Ball Says...",
-				"value": `${j}.`
+				"value": `${k}.`
 			}
 		]
 		};
