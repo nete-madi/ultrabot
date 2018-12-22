@@ -52,6 +52,12 @@ var jokes = [
 	const args = msg.content.slice(prefix.length).trim().split(/ +/g);
  	const cmd = args.shift().toLowerCase();
 
+	var search = require('youtube-search');
+	var opts ={
+		maxResults: 5;
+		key: "AIzaSyCmx7svuUOrct6P-Celnsf0rSQ3AtIf7bo"
+	}
+
 	switch (cmd) {
   case "joke" :
 		let i = Math.floor(Math.random()*jokes.length)
@@ -154,7 +160,7 @@ var jokes = [
 			msg.channel.send({ embed:info });
 			break;
 
-		/*case "youtube":
+		case "youtube":
 			search(args.join(' ').substring(4), opts, function(err, results)){
 				if(err) return console.log(err);
 				msg.channel.sendMessage(results);
