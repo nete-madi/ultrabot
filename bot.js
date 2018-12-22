@@ -52,12 +52,6 @@ var jokes = [
 	const args = msg.content.slice(prefix.length).trim().split(/ +/g);
  	const cmd = args.shift().toLowerCase();
 
-	var search = require('youtube-search');
-	var opts ={
-		maxResults: 5,
-		key: 'AIzaSyCmx7svuUOrct6P-Celnsf0rSQ3AtIf7bo'
-	};
-
 	switch (cmd) {
   case "joke" :
 		let i = Math.floor(Math.random()*jokes.length)
@@ -159,37 +153,6 @@ var jokes = [
 
 			msg.channel.send({ embed:info });
 			break;
-
-		/*case "youtube":
-		search(args.join(' ').substring(4), opts, function(err, results) {
-    if(err) return console.log(err);
-  	msg.channel.send(results);
-  	console.log(results[0].link);
-  		})
-		break;
-	/*	let info = {
-			"color": 0xff0000,
-			"author": {
-				"name": `User Information for ${msg.author.username}.`,
-				"icon_url": `${bot.user.avatarURL}`
-				},
-				"thumbnail":{
-					"url": `${msg.author.avatarURL}`
-				},
-			"fields": [
-				{
-					"name": "Username: ",
-					"value": `${msg.author.username}#${msg.author.discriminator}`
-				},
-				{
-					"name": "User ID: ",
-					"value": `${msg.author.id}`
-				},
-				{
-					"name": "Status: ",
-					"value": `${msg.author.presence.status}`,
-					"inline": true
-				}*/
 
 		}//end of switch block
 
