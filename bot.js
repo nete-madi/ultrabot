@@ -154,6 +154,36 @@ var jokes = [
 			msg.channel.send({ embed:info });
 			break;
 
+		case "youtube":
+			search(args.join(' ').substring(4), opts, function(err, results)){
+				if(err) return console.log(err);
+				msg.channel.sendMessage(results);
+				console.log(results[0].link);
+			}
+	/*	let info = {
+			"color": 0xff0000,
+			"author": {
+				"name": `User Information for ${msg.author.username}.`,
+				"icon_url": `${bot.user.avatarURL}`
+				},
+				"thumbnail":{
+					"url": `${msg.author.avatarURL}`
+				},
+			"fields": [
+				{
+					"name": "Username: ",
+					"value": `${msg.author.username}#${msg.author.discriminator}`
+				},
+				{
+					"name": "User ID: ",
+					"value": `${msg.author.id}`
+				},
+				{
+					"name": "Status: ",
+					"value": `${msg.author.presence.status}`,
+					"inline": true
+				}*/
+
 		}//end of switch block
 
 	});
