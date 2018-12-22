@@ -154,7 +154,7 @@ var jokes = [
 			msg.channel.send({ embed:info });
 			break;
 
-		case "youtube":
+		/*case "youtube":
 			search(args.join(' ').substring(4), opts, function(err, results)){
 				if(err) return console.log(err);
 				msg.channel.sendMessage(results);
