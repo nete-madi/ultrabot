@@ -161,14 +161,6 @@ var jokes = [
 			msg.channel.send({ embed:info });
 			break;
 
-	case "youtube":
-		search(args.join(' ').substring(4), opts, function(err, results) {
-    if(err) return console.log(err);
-  	msg.channel.send(results);
-  	console.log(results[0].link);
-  		})
-		break;
-
 		}//end of switch block
 bot.login(process.env.BOT_TOKEN);
 });
