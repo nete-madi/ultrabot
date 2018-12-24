@@ -3,6 +3,7 @@ const bot = new Discord.Client();
 
 bot.on('ready',()=>{
 		bot.user.setPresence({ status: 'online', game: { name: '!help for command list' } });
+		console.log("Connected as " + bot.user.tag);
 })
 
 var http = require("http");
@@ -10,7 +11,7 @@ setInterval(function() {
     http.get("http://ultra-bot-.herokuapp.com");
 }, 300000); //pings bot every 5 minutes to make sure it stays online
 
-var prefix = ".";
+var prefix = ">";
 
 bot.on('message', msg =>{
 
@@ -51,6 +52,12 @@ var jokes = [
 
 	const args = msg.content.slice(prefix.length).trim().split(/ +/g);
  	const cmd = args.shift().toLowerCase();
+
+	var search = require('youtube-search');
+	var opts ={
+		maxResults: 5,
+		key: 'AIzaSyCmx7svuUOrct6P-Celnsf0rSQ3AtIf7bo'
+	};
 
 	switch (cmd) {
   case "joke" :
@@ -154,8 +161,14 @@ var jokes = [
 			msg.channel.send({ embed:info });
 			break;
 
+	case "youtube":
+		search(args.join(' ').substring(4), opts, function(err, results) {
+    if(err) return console.log(err);
+  	msg.channel.send(results);
+  	console.log(results[0].link);
+  		})
+		break;
+
 		}//end of switch block
-
-
 bot.login(process.env.BOT_TOKEN);
-	});
+});
